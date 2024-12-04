@@ -146,6 +146,28 @@ body {
     color: var(--primary);
 }
 
+.cv-button {
+    margin-top: 2rem;
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.cv-button:hover {
+    background: var(--accent);
+    transform: translateY(-3px);
+}
+
+.cv-button i {
+    font-size: 1.2rem;
+}
+
 .about-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -344,9 +366,12 @@ button:hover {
             <div class="typed-text"></div>
             <p>B.Tech Honours Student in Information Technology</p>
             <p>Harare Institute of Technology</p>
+            <!-- Add this button -->
+            <button onclick="downloadCV()" class="cv-button">
+                <i class="fas fa-download"></i> Download CV
+            </button>
         </div>
     </section>
-
     <section id="about" class="section">
         <h2 class="section-title" data-aos="fade-down">About Me</h2>
         <div class="about-grid">
@@ -575,6 +600,15 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.skills-container').forEach((element) => {
     observer.observe(element);
 });
+function downloadCV() {
+    const link = document.createElement('a');
+    link.href = '/assets/files/emmanuel-cv.pdf';  // Update this path to your CV file
+    link.download = 'Emmanuel_Chinjekure_CV.pdf'; // Name for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
 </script>
 </body>
 </html>
