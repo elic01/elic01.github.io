@@ -487,6 +487,11 @@ new Typed('.typed-text', {
     loop: true
 });
 
+// Set dark mode as default
+document.body.setAttribute('data-theme', 'dark');
+document.querySelector('.theme-toggle i').classList.remove('fa-moon');
+document.querySelector('.theme-toggle i').classList.add('fa-sun');
+
 // Particles.js configuration
 particlesJS('particles-js', {
     particles: {
@@ -612,3 +617,4 @@ function downloadCV() {
 </script>
 </body>
 </html>
+
