@@ -52,6 +52,44 @@ body {
     height: 100%;
     z-index: -1;
 }
+.image-loader {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-loader::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.lazy-image {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.lazy-image.loaded {
+    opacity: 1;
+}
 
 .navbar {
     position: fixed;
@@ -118,7 +156,11 @@ body {
     box-shadow: 0 8px 32px var(--shadow);
     backdrop-filter: blur(10px);
 }
-
+.hero-content, .about-card, .skill-card, .project-card {
+    background: rgba(45, 52, 54, 0.7);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
 .profile-img {
     width: 200px;
     height: 200px;
@@ -234,6 +276,12 @@ body {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 8px 32px var(--shadow);
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
 }
 
 .project-img {
@@ -361,7 +409,12 @@ button:hover {
 
     <section id="home" class="hero">
         <div class="hero-content" data-aos="fade-up">
-            <img src="/assets/images/elic.jpg" alt="Profile" class="profile-img">
+            <img 
+    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
+    data-src="/assets/images/elic.jpg" 
+    alt="Profile" 
+    class="profile-img lazy-image image-loader">
+
             <h1>Emmanuel Leon Isheanesu Chinjekure</h1>
             <div class="typed-text"></div>
             <p>B.Tech Honours Student in Information Technology</p>
@@ -419,7 +472,11 @@ button:hover {
         <h2 class="section-title" data-aos="fade-down">Projects</h2>
         <div class="projects-grid">
             <div class="project-card" data-aos="flip-left">
-                <img src="/assets/images/zimosaka.png" alt="Project 1" class="project-img">
+                <img 
+    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
+    data-src="/assets/images/zimosaka.png" 
+    alt="Project 1" 
+    class="project-img lazy-image image-loader">
                 <div class="project-content">
                     <h3>Zimbabwe Osaka Expo Website</h3>
                     <p>The Republic of Zimbabwe will participate in the Expo 2025 Osaka to be held in Japan from 13 April to 13 October 2024. Zimbabwe will showcase under the theme, “Beyond the Limits”.This is a prototype design to showcase Zimbabwe </p>
@@ -549,6 +606,46 @@ particlesJS('particles-js', {
     },
     retina_detect: true
 });
+// Lazy loading implementation
+document.addEventListener("DOMContentLoaded", function() {
+    const lazyImages = document.querySelectorAll(".lazy-image");
+    
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.onload = () => {
+                    img.classList.add('loaded');
+                };
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    lazyImages.forEach(img => {
+        imageObserver.observe(img);
+    });
+});
+
+// Progressive image loading
+function loadImage(img) {
+    const lowQuality = img.dataset.src.replace('.jpg', '-low.jpg');
+    
+    // Load low quality image first
+    const tempImage = new Image();
+    tempImage.src = lowQuality;
+    tempImage.onload = () => {
+        img.src = lowQuality;
+        
+        // Then load high quality image
+        const highQuality = new Image();
+        highQuality.src = img.dataset.src;
+        highQuality.onload = () => {
+            img.src = img.dataset.src;
+        };
+    };
+}
 
 // Theme toggle functionality
 function toggleTheme() {
@@ -613,8 +710,21 @@ function downloadCV() {
     link.click();
     document.body.removeChild(link);
 }
+// Add scroll reveal animations
+ScrollReveal().reveal('.project-card', {
+    delay: 200,
+    distance: '50px',
+    origin: 'bottom',
+    interval: 200
+});
+
+// Add custom cursor
+const cursor = document.createElement('div');
+cursor.className = 'custom-cursor';
+document.body.appendChild(cursor);
 
 </script>
 </body>
 </html>
+
 
