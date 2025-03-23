@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emmanuel Leon | Software Developer</title>
+    <title>Emmanuel Leon Isheanesu Chinjekure | Software Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
@@ -251,7 +251,6 @@
             animation: fadeInUp 1s ease 0.4s forwards;
             opacity: 0;
         }
-
         .cta-button {
             display: inline-block;
             background: transparent;
@@ -266,10 +265,7 @@
             position: relative;
             overflow: hidden;
             z-index: 1;
-            animation: fadeInUp 1s ease 0.6s forwards;
-            opacity: 0;
         }
-
         .cta-button::before {
             content: '';
             position: absolute;
@@ -290,6 +286,29 @@
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
         }
+        /* Add this after the existing cta-button styles */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease 0.6s forwards;
+    opacity: 0;
+}
+
+.download-btn {
+    background-color: var(--accent);
+    color: var(--primary);
+    border: 1px solid var(--accent);
+}
+
+.download-btn::before {
+    background: rgba(10, 25, 47, 0.1);
+}
+
+.download-btn:hover {
+    color: var(--primary);
+}
+
 
         .hero-image-container {
             position: absolute;
@@ -1416,8 +1435,8 @@
     <header id="header">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <div class="logo-icon">EL</div>
-                <span>Emmanuel</span>
+                <div class="logo-icon">EC</div>
+                <span>Emmanuel Leon Isheanesu Chinjekure</span>
             </a>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -1449,7 +1468,7 @@
 
     <!-- Email Link -->
     <div class="email-link">
-        <a href="mailto:emmanuel@example.com">emmanuel@example.com</a>
+        <a href="mailto:isheanesu2004@gmail.com">isheanesu2004@gmail.com</a>
     </div>
 
     <!-- Hero Section -->
@@ -1461,11 +1480,14 @@
                 <h2 class="hero-tagline">Innovating Through Code and Creativity.</h2>
                 <p class="hero-description">I'm an aspiring software developer and IT enthusiast passionate about building innovative solutions. Currently focused on developing modern web applications and exploring the intersection of AI and software development.</p>
                 <a href="#contact" class="cta-button">Get In Touch</a>
+                <a href="./assets/files/EMMANUEL LEON ISHEANESU CHINJEKURE CV.pdf" class="cta-button download-btn" download>
+                    <i class="fas fa-download"></i> Download CV
+                </a>
             </div>
         </div>
         <div class="hero-image-container">
             <div class="hero-image">
-                <img src="https://picsum.photos/id/1/600/600" alt="Emmanuel Leon">
+                <img src="https://picsum.photos/id/1/600/600" alt="Emmanuel L I Chinjekure">
             </div>
         </div>
     </section>
@@ -1487,7 +1509,7 @@
                     <p>I'm always open to new opportunities, collaborations, and learning experiences. Feel free to <a href="#contact">reach out</a> if you'd like to connect!</p>
                 </div>
                 <div class="about-image">
-                    <img src="https://picsum.photos/id/1005/600/800" alt="Emmanuel Leon">
+                    <img src="./assets/images/elic.jpg" alt="Emmanuel Leon Isheanesu Chinjekure">
                 </div>
             </div>
         </div>
@@ -1504,7 +1526,7 @@
                         <li class="skill-item">
                             <div class="skill-info">
                                 <span class="skill-name">Python</span>
-                                <span class="skill-percentage">90%</span>
+                                <span class="skill-percentage">75%</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="90"></div>
@@ -1513,7 +1535,7 @@
                         <li class="skill-item">
                             <div class="skill-info">
                                 <span class="skill-name">Java</span>
-                                <span class="skill-percentage">85%</span>
+                                <span class="skill-percentage">65%</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="85"></div>
@@ -1522,7 +1544,7 @@
                         <li class="skill-item">
                             <div class="skill-info">
                                 <span class="skill-name">C#</span>
-                                <span class="skill-percentage">80%</span>
+                                <span class="skill-percentage">70%</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="80"></div>
@@ -1613,7 +1635,7 @@
                         <li class="skill-item">
                             <div class="skill-info">
                                 <span class="skill-name">Kivy</span>
-                                <span class="skill-percentage">75%</span>
+                                <span class="skill-percentage">55%</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="75"></div>
@@ -1673,19 +1695,19 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://picsum.photos/id/3/600/400" alt="HIT 200 Group Project">
+                        <img src="./assets/images/underconstruction.jpg" alt="HIT 200 Group Project">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">HIT 200 Group Project</h3>
                         <p class="project-description">A collaborative project focused on developing an innovative solution for educational technology. Implemented advanced features for student engagement and learning analytics.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">HTML/CSS</span>
-                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Next.JS</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Firestore</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" title="View Code"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/elic01/uniconnect" title="View Code"><i class="fab fa-github"></i></a>
                             <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
@@ -1704,49 +1726,31 @@
                             <span class="tech-tag">Responsive Design</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" title="View Code"><i class="fab fa-github"></i></a>
-                            <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/elic01/elic01.github.io" title="View Code"><i class="fab fa-github"></i></a>
+                            <a href="https://elic01.github.io" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://picsum.photos/id/160/600/400" alt="AI Chatbot">
+                        <img src="./assets/images/zimosaka.png" alt="Zimbabwe Osaka Expo Website">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">AI-powered Chatbot</h3>
-                        <p class="project-description">Developed an intelligent chatbot using natural language processing techniques. Capable of answering questions and providing assistance on various topics.</p>
+                        <h3 class="project-title">Zimbabwe Osaka Expo Website </h3>
+                        <p class="project-description">Developed a responsive website for the Zimbabwe Osaka Expo, showcasing the event's activities and attractions. Utilized HTML, CSS, and JavaScript for frontend development.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
                             <span class="tech-tag">API Integration</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" title="View Code"><i class="fab fa-github"></i></a>
-                            <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/elic01/ZimOsakaExpo2025" title="View Code"><i class="fab fa-github"></i></a>
+                            <a href="https://elic01.github.io/ZimOsakaExpo2025/" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://picsum.photos/id/119/600/400" alt="Mobile App">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Mobile App Prototype</h3>
-                        <p class="project-description">Designed and developed a prototype for a mobile application focused on environmental awareness and conservation efforts.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Kivy</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">UI/UX Design</span>
-                            <span class="tech-tag">SQLite</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" title="View Code"><i class="fab fa-github"></i></a>
-                            <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -1757,34 +1761,34 @@
             <h2 class="section-title">Experience & Leadership</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">2022 - Present</div>
+                    <div class="timeline-date">2025 - Present</div>
                     <h3 class="timeline-title">President</h3>
                     <div class="timeline-company">HIT Eco and Wildlife Club</div>
                     <p class="timeline-description">Leading environmental initiatives and conservation projects. Organizing awareness campaigns and community engagement activities. Managing a team of passionate students dedicated to environmental protection.</p>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">2021 - 2022</div>
-                    <h3 class="timeline-title">Entertainment Director</h3>
+                    <div class="timeline-date">2024 - Present</div>
+                    <h3 class="timeline-title">Entertainment Director & Peer educator</h3>
                     <div class="timeline-company">UNESCO O3 Plus</div>
                     <p class="timeline-description">Coordinated entertainment activities for UNESCO's O3 Plus program. Developed creative approaches to engage participants through entertainment while promoting educational objectives.</p>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">2020 - 2021</div>
-                    <h3 class="timeline-title">Software Development Intern</h3>
-                    <div class="timeline-company">Tech Solutions Inc.</div>
-                    <p class="timeline-description">Assisted in developing web applications using modern frameworks. Participated in code reviews and testing procedures. Gained hands-on experience in agile development methodologies.</p>
+                    <div class="timeline-date">2024 - Present</div>
+                    <h3 class="timeline-title"></h3>
+                    <div class="timeline-company">Friendship Bench Peer Counsellor</div>
+                    <p class="timeline-description">Guided and mentored students in their academic and personal development. Provided support and guidance to help students succeed in their academic pursuits.</p>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">2019 - 2020</div>
-                    <h3 class="timeline-title">Student Volunteer</h3>
-                    <div class="timeline-company">IT Support Team</div>
-                    <p class="timeline-description">Provided technical support to students and faculty members. Assisted in maintaining computer labs and troubleshooting hardware/software issues. Developed documentation for common IT procedures.</p>
+                    <h3 class="timeline-title">Prefect</h3>
+                    <div class="timeline-company">Sanyati Baptist High School</div>
+                    <p class="timeline-description">Managed school operations, ensuring student well-being and academic excellence. Collaborated with teachers, administrators, and parents to foster a supportive learning environment.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications Section -->
+    <!-- Certifications Section 
     <section id="certifications" class="certifications">
         <div class="container">
             <h2 class="section-title">Certifications & Achievements</h2>
@@ -1824,7 +1828,7 @@
             </div>
         </div>
     </section>
-
+    -->
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -1836,11 +1840,11 @@
                     <ul class="contact-links">
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <a href="mailto:emmanuel@example.com">emmanuel@example.com</a>
+                            <a href="mailto:isheanesu2004@gmail.com">isheanesu2004@gmail.com</a>
                         </li>
                         <li>
                             <i class="fas fa-phone"></i>
-                            <a href="tel:+1234567890">+123 456 7890</a>
+                            <a href="tel:+263788547017">+263 78 854 7017</a>
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
@@ -1883,7 +1887,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Emmanuel Leon</div>
+                <div class="footer-logo">Emmanuel Leon Isheanesu Chinjekure</div>
                 <p class="footer-text">Innovating Through Code and Creativity</p>
                 <div class="footer-links">
                     <a href="#"><i class="fab fa-github"></i></a>
@@ -1891,7 +1895,7 @@
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
-                <p class="footer-credit">Designed & Built by <a href="#">Emmanuel Leon</a> © 2023</p>
+                <p class="footer-credit">Designed & Built by <a href="#">Emmanuel Leon Isheanesu Chinjekure</a> © 2025</p>
             </div>
         </div>
     </footer>
