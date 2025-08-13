@@ -288,9 +288,7 @@ header.scrolled {
     justify-content: flex-end;
 }
 
-.nav-links li {
-    /* No additional margin needed due to gap */
-}
+
 
 .nav-links a {
     color: var(--text);

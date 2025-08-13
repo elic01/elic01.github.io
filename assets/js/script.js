@@ -177,7 +177,7 @@
             } else if (message.includes('project') || message.includes('work')) {
                 return "Emmanuel has worked on several exciting projects! Check out the Projects section to learn more about them.";
             } else if (message.includes('contact') || message.includes('reach') || message.includes('email')) {
-                return "You can contact Emmanuel via email at emmanuel@example.com or through the contact form on this website.";
+                return "You can contact Emmanuel via email at emmanuelisheanesu2004@gmail.com or through the contact form on this website.";
             } else if (message.includes('skill') || message.includes('technology') || message.includes('tech stack')) {
                 return "Emmanuel is skilled in Python, Java, C#, HTML, CSS, JavaScript, and more. The Skills section has a detailed breakdown.";
             } else if (message.includes('experience') || message.includes('job') || message.includes('work history')) {

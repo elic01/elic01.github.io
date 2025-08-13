@@ -30,7 +30,7 @@ Full Stack Developer | Cybersecurity Enthusiast | Tech Explorer
 
 ## Contact
 
-- **Email:** [isheanesu2004@gmail.com](mailto:isheanesu2004@gmail.com)
+- **Email:** [emmanuelisheanesu2004@gmail.com](mailto:emmanuelisheanesu2004@gmail.com)
 - **Phone:** +263 78 854 7017
 - **Location:** Harare, Zimbabwe
 

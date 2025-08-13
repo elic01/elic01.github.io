@@ -1,3 +1,4 @@
 {
-    "gitConfigUser.selectedProfile": "elic01"
+    "gitConfigUser.selectedProfile": "elic01",
+    "svn.ignoreMissingSvnWarning": true
 }

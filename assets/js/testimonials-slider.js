@@ -80,7 +80,7 @@ class TestimonialsSlider {
             {
                 quote: "Emmanuel is an exceptional developer with a keen eye for detail. His leadership in environmental initiatives while maintaining excellent academic performance is truly inspiring.",
                 author: "Mr. Mudawarima",
-                position: "Senior Lecturer, HIT",
+                position: "IT Lecturer, HIT",
                 avatar: "https://ui-avatars.com/api/?name=Sarah+Mukamuri&background=64ffda&color=0a192f&size=80"
             },
             {
