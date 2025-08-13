@@ -1,0 +1,190 @@
+{
+  "html_metrics": {
+    "file_size": 42085,
+    "line_count": 745,
+    "char_count": 42084,
+    "external_resources": [
+      "https://fonts.googleapis.com",
+      "https://fonts.gstatic.com",
+      "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Roboto:wght@300;400;500&display=swap",
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css",
+      "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+    ],
+    "images": [
+      "./assets/images/ELIC01.jpeg",
+      "./assets/images/elic.jpg",
+      "./assets/images/elic.jpg",
+      "./assets/images/ELIC01.jpeg",
+      "./assets/images/zimosaka.png"
+    ],
+    "scripts": [
+      "./assets/js/script.js",
+      "./assets/js/skeleton-loaders.js",
+      "./assets/js/particle-background.js",
+      "./assets/js/animations.js",
+      "./assets/js/page-transitions.js",
+      "./assets/js/timeline.js",
+      "./assets/js/project-showcase.js",
+      "./assets/js/skills-radar.js",
+      "./assets/js/testimonials-slider.js"
+    ],
+    "stylesheets": [
+      "https://fonts.googleapis.com",
+      "https://fonts.gstatic.com",
+      "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Roboto:wght@300;400;500&display=swap",
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css",
+      "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap",
+      "./assets/css/styles.css"
+    ],
+    "meta_tags": [
+      "<meta charset=\"UTF-8\">",
+      "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "<meta name=\"description\" content=\"Portfolio of Emmanuel Leon Isheanesu Chinjekure - Full Stack Developer specializing in Python, Java, JavaScript, and modern web development. HIT student leader and tech innovator.\">",
+      "<meta name=\"keywords\" content=\"Full Stack Developer Zimbabwe, Python Developer Harare, Web Development Portfolio, Emmanuel Chinjekure, Software Engineer, HIT Student, Cybersecurity Enthusiast, African Tech Talent\">",
+      "<meta name=\"author\" content=\"Emmanuel Leon Isheanesu Chinjekure\">",
+      "<meta name=\"robots\" content=\"index, follow\">",
+      "<meta name=\"geo.region\" content=\"ZW-HA\">",
+      "<meta name=\"geo.placename\" content=\"Harare, Zimbabwe\">",
+      "<meta property=\"og:title\" content=\"Emmanuel Leon Isheanesu Chinjekure | Full Stack Developer & Tech Innovator\">",
+      "<meta property=\"og:description\" content=\"HIT Information Technology student passionate about building innovative solutions. Leader in environmental initiatives and tech development.\">",
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://elic01.github.io\">",
+      "<meta property=\"og:image\" content=\"https://elic01.github.io/assets/images/ELIC01.jpeg\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">",
+      "<meta name=\"twitter:title\" content=\"Emmanuel Leon Isheanesu Chinjekure | Full Stack Developer\">",
+      "<meta name=\"twitter:description\" content=\"Python, Java, JavaScript developer from Harare, Zimbabwe. Building innovative tech solutions.\">"
+    ],
+    "accessibility_features": {
+      "alt_text_count": 5,
+      "aria_labels": 0,
+      "semantic_elements": 9,
+      "form_labels": 4
+    }
+  },
+  "assets_info": {
+    "total_size": 6934646,
+    "file_types": {
+      ".css": [
+        {
+          "path": "assets\\css\\styles.css",
+          "size": 46031,
+          "size_kb": 44.95
+        }
+      ],
+      ".pdf": [
+        {
+          "path": "assets\\files\\EMMANUEL LEON ISHEANESU CHINJEKURE CV.pdf",
+          "size": 127684,
+          "size_kb": 124.69
+        }
+      ],
+      ".jpg": [
+        {
+          "path": "assets\\images\\elic.jpg",
+          "size": 3823941,
+          "size_kb": 3734.32
+        },
+        {
+          "path": "assets\\images\\underconstruction.jpg",
+          "size": 665857,
+          "size_kb": 650.25
+        }
+      ],
+      ".jpeg": [
+        {
+          "path": "assets\\images\\ELIC01.jpeg",
+          "size": 79378,
+          "size_kb": 77.52
+        }
+      ],
+      ".png": [
+        {
+          "path": "assets\\images\\zimosaka.png",
+          "size": 2012206,
+          "size_kb": 1965.04
+        }
+      ],
+      ".js": [
+        {
+          "path": "assets\\js\\animations.js",
+          "size": 18015,
+          "size_kb": 17.59
+        },
+        {
+          "path": "assets\\js\\page-transitions.js",
+          "size": 23366,
+          "size_kb": 22.82
+        },
+        {
+          "path": "assets\\js\\particle-background.js",
+          "size": 17073,
+          "size_kb": 16.67
+        },
+        {
+          "path": "assets\\js\\project-showcase.js",
+          "size": 20705,
+          "size_kb": 20.22
+        },
+        {
+          "path": "assets\\js\\script.js",
+          "size": 9660,
+          "size_kb": 9.43
+        },
+        {
+          "path": "assets\\js\\skeleton-loaders.js",
+          "size": 19548,
+          "size_kb": 19.09
+        },
+        {
+          "path": "assets\\js\\skills-radar.js",
+          "size": 20346,
+          "size_kb": 19.87
+        },
+        {
+          "path": "assets\\js\\testimonials-slider.js",
+          "size": 21640,
+          "size_kb": 21.13
+        },
+        {
+          "path": "assets\\js\\theme-manager.js",
+          "size": 12383,
+          "size_kb": 12.09
+        },
+        {
+          "path": "assets\\js\\timeline.js",
+          "size": 16813,
+          "size_kb": 16.42
+        }
+      ]
+    },
+    "structure": {}
+  },
+  "performance_report": {
+    "html_analysis": {
+      "file_size_kb": 41.1,
+      "line_count": 745,
+      "external_dependencies": 5,
+      "local_scripts": 9,
+      "local_stylesheets": 1,
+      "total_images": 5
+    },
+    "assets_analysis": {
+      "total_size_kb": 6772.12,
+      "css_files": 1,
+      "js_files": 10,
+      "image_files": 4
+    },
+    "external_dependencies": [
+      "https://fonts.googleapis.com",
+      "https://fonts.gstatic.com",
+      "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Roboto:wght@300;400;500&display=swap",
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css",
+      "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+    ],
+    "optimization_opportunities": [
+      "Consider reducing external dependencies",
+      "Assets directory is large, consider optimization",
+      "Many script files - consider bundling"
+    ]
+  }
+}
