@@ -27,9 +27,13 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
+
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
     <!-- External Stylesheet -->
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/enhanced.css">
 </head>
 <body>
     <div class="noise-overlay"></div>
@@ -72,24 +76,58 @@
         <a href="mailto:emmanuelisheanesu2004@gmail.com">emmanuelisheanesu2004@gmail.com</a>
     </div>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Enhanced -->
     <section id="home" class="hero">
+        <div class="hero-particles" id="particles-js"></div>
         <div class="container">
             <div class="hero-content">
-                <p class="hero-greeting">Hi, my name is</p>
-                <h1 class="hero-name">Emmanuel Leon Isheanesu Chinjekure.</h1>
-                <h2 class="hero-tagline">Innovating Through Code and Creativity.</h2>
-                <p class="hero-description">I'm a software developer and IT professional currently working as an IT Intern at CIMAS Health Group. Passionate about building innovative solutions, developing modern web applications, and exploring the intersection of technology and healthcare systems.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="cta-button">Get In Touch</a>
-                    <a href="./assets/files/EMMANUEL LEON ISHEANESU CHINJEKURE CV.pdf" class="cta-button download-btn" download>
-                        <i class="fas fa-download"></i> Download CV
+                <p class="hero-greeting" data-aos="fade-up">Hi, my name is</p>
+                <h1 class="hero-name" data-aos="fade-up" data-aos-delay="100">
+                    <span class="highlight-text">Emmanuel Leon</span> Isheanesu Chinjekure.
+                </h1>
+                <h2 class="hero-tagline" data-aos="fade-up" data-aos-delay="200">
+                    <span class="typing-text"></span>
+                </h2>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+                    I'm a <strong>Full Stack Developer</strong> and <strong>Cybersecurity Enthusiast</strong> currently working as an <strong class="highlight-accent">IT Intern at CIMAS Health Group</strong>. Passionate about building innovative solutions, developing modern web applications, and exploring the intersection of technology and healthcare systems.
+                </p>
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="2">0</span>
+                        <span class="stat-label">Years Learning</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="10">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="15">0</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                </div>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#contact" class="cta-button primary-btn">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#projects" class="cta-button secondary-btn">
+                        <span>View Projects</span>
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                    <a href="./assets/files/EMMANUEL LEON ISHEANESU CHINJEKURE CV.pdf" class="cta-button outline-btn" download>
+                        <i class="fas fa-download"></i>
+                        <span>Download CV</span>
                     </a>
                 </div>
             </div>
-            <div class="hero-image-container">
+            <div class="hero-image-container" data-aos="fade-left" data-aos-delay="300">
                 <div class="hero-image">
+                    <div class="image-border-animation"></div>
                     <img src="./assets/images/ELIC01.jpeg" alt="Emmanuel Leon Isheanesu Chinjekure - Full Stack Developer" loading="eager">
+                    <div class="floating-badge">
+                        <i class="fas fa-code"></i>
+                        <span>IT Intern @ CIMAS</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -774,11 +812,16 @@
     </div>
 
 
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Typed.js for typing effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
     <!-- Main optimized JavaScript -->
     <script src="./assets/js/main.js"></script>
 
-    <!-- Optional: Uncomment for advanced animations (increases load time)
-    <script src="./assets/js/particle-background.js" defer></script>
-    -->
+    <!-- Enhanced features JavaScript -->
+    <script src="./assets/js/enhanced.js"></script>
 </body>
 </html>
