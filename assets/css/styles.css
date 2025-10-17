@@ -1009,11 +1009,34 @@ header.scrolled {
 }
 
 /* ========================================
-   SKILLS SECTION
+   SKILLS SECTION - MODERN TECH-SAVVY DESIGN
    ======================================== */
 
 .skills {
     position: relative;
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.5) 0%, rgba(17, 34, 64, 0.7) 100%);
+    border-radius: 30px;
+    padding: var(--space-3xl) var(--space-lg);
+    margin: var(--space-2xl) 0;
+}
+
+.skills::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(100, 255, 218, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(177, 74, 237, 0.06) 0%, transparent 50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.skills .container {
+    position: relative;
+    z-index: 2;
 }
 
 .skills-container {
@@ -1024,19 +1047,28 @@ header.scrolled {
 }
 
 .skill-category {
-    background: var(--secondary);
-    border-radius: 10px;
+    background: rgba(17, 34, 64, 0.6);
+    backdrop-filter: blur(20px) saturate(1.2);
+    -webkit-backdrop-filter: blur(20px) saturate(1.2);
+    border: 1px solid rgba(100, 255, 218, 0.15);
+    border-radius: 16px;
     padding: 2rem;
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(100, 255, 218, 0.1) inset;
     z-index: 1;
 }
 
 .skill-category:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-12px) scale(1.02);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        0 0 80px rgba(100, 255, 218, 0.2),
+        0 0 0 1px rgba(100, 255, 218, 0.3) inset;
+    border-color: rgba(100, 255, 218, 0.4);
 }
 
 .skill-category::before {
@@ -1046,8 +1078,14 @@ header.scrolled {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(0, 200, 255, 0.05), rgba(177, 74, 237, 0.05));
+    background: linear-gradient(135deg, rgba(100, 255, 218, 0.08), rgba(177, 74, 237, 0.08));
+    opacity: 0;
+    transition: opacity 0.4s ease;
     z-index: -1;
+}
+
+.skill-category:hover::before {
+    opacity: 1;
 }
 
 .skill-category h3 {
@@ -1776,6 +1814,39 @@ footer {
 /* ========================================
    ANIMATIONS
    ======================================== */
+
+/* Section visibility animations */
+.section-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Form validation styles */
+.form-control.error {
+    border-color: var(--error);
+}
+
+.field-error {
+    color: var(--error);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+/* Image lazy loading */
+img[data-src] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+img.loaded {
+    opacity: 1;
+}
 
 @keyframes fadeInUp {
     from {
