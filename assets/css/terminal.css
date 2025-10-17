@@ -1,0 +1,547 @@
+/**
+ * Terminal/Cyber Theme - Authentic IT/Dev/Security Aesthetic
+ * No fluff, just code.
+ */
+
+/* ==================== CORE TERMINAL THEME ==================== */
+
+:root {
+    /* Terminal Colors */
+    --term-bg: #0d1117;
+    --term-surface: #161b22;
+    --term-border: #30363d;
+    --term-green: #39ff14;
+    --term-cyan: #00ffff;
+    --term-yellow: #ffff00;
+    --term-red: #ff0000;
+    --term-text: #c9d1d9;
+    --term-text-dim: #8b949e;
+    --term-accent: #58a6ff;
+
+    /* Matrix-style */
+    --matrix-green: #00ff41;
+    --hacker-green: #0f0;
+}
+
+/* ==================== TERMINAL WINDOW ==================== */
+
+.terminal-window {
+    background: var(--term-surface);
+    border: 1px solid var(--term-border);
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    margin: 2rem 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.terminal-header {
+    background: var(--term-bg);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--term-border);
+}
+
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-button.red { background: #ff5f56; }
+.terminal-button.yellow { background: #ffbd2e; }
+.terminal-button.green { background: #27c93f; }
+
+.terminal-title {
+    margin-left: auto;
+    color: var(--term-text-dim);
+    font-size: 0.85rem;
+}
+
+.terminal-body {
+    padding: 1.5rem;
+    background: var(--term-bg);
+    color: var(--term-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    min-height: 300px;
+}
+
+.terminal-line {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.prompt {
+    color: var(--term-green);
+    font-weight: bold;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background: var(--term-green);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.terminal-output {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.terminal-output p {
+    margin: 0.5rem 0;
+}
+
+/* ==================== TEXT STYLING ==================== */
+
+.accent-text {
+    color: var(--term-cyan);
+}
+
+.green-text {
+    color: var(--term-green);
+    font-weight: 600;
+}
+
+.highlight-tech {
+    color: var(--term-accent);
+    background: rgba(88, 166, 255, 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+/* ==================== TERMINAL SKILL LIST ==================== */
+
+.skill-list-terminal {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+}
+
+.skill-row {
+    display: grid;
+    grid-template-columns: 120px 80px 150px 1fr;
+    gap: 1rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(48, 54, 61, 0.3);
+}
+
+.file-permission {
+    color: var(--term-text-dim);
+}
+
+.file-owner {
+    color: var(--term-yellow);
+}
+
+.file-name {
+    color: var(--term-cyan);
+    font-weight: 500;
+}
+
+.skill-level {
+    color: var(--term-green);
+    font-family: monospace;
+    letter-spacing: -1px;
+}
+
+/* ==================== QUICK STATS CARDS ==================== */
+
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.stat-card {
+    background: var(--term-surface);
+    border: 1px solid var(--term-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: var(--term-green);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(57, 255, 20, 0.2);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--term-green);
+    font-family: 'Fira Code', monospace;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--term-text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+}
+
+/* ==================== CODE BLOCK STYLING ==================== */
+
+.code-block {
+    background: var(--term-bg);
+    border: 1px solid var(--term-border);
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+.code-block code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    color: var(--term-text);
+}
+
+.code-comment {
+    color: #6a737d;
+}
+
+.code-keyword {
+    color: #ff7b72;
+}
+
+.code-string {
+    color: #a5d6ff;
+}
+
+.code-function {
+    color: #d2a8ff;
+}
+
+/* ==================== PROJECT CARDS - TECH STYLE ==================== */
+
+.project-card-tech {
+    background: var(--term-surface);
+    border: 1px solid var(--term-border);
+    border-left: 3px solid var(--term-green);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.project-card-tech:hover {
+    border-left-color: var(--term-cyan);
+    transform: translateX(5px);
+    box-shadow: 0 8px 24px rgba(0, 255, 255, 0.15);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 1rem;
+}
+
+.project-title-tech {
+    font-size: 1.3rem;
+    color: var(--term-text);
+    font-weight: 600;
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.tag {
+    background: rgba(88, 166, 255, 0.1);
+    color: var(--term-accent);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(88, 166, 255, 0.3);
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-link {
+    color: var(--term-cyan);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.2s;
+}
+
+.project-link:hover {
+    color: var(--term-green);
+}
+
+/* ==================== ASCII ART ==================== */
+
+.ascii-art {
+    font-family: monospace;
+    white-space: pre;
+    color: var(--term-green);
+    font-size: 0.7rem;
+    line-height: 1.2;
+    overflow-x: auto;
+}
+
+/* ==================== MATRIX RAIN EFFECT ==================== */
+
+.matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.03;
+    pointer-events: none;
+}
+
+/* ==================== SECTION TITLE - TERMINAL STYLE ==================== */
+
+.section-title-terminal {
+    font-family: 'Fira Code', monospace;
+    color: var(--term-text);
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.section-title-terminal::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--term-green);
+    font-weight: bold;
+}
+
+/* ==================== TIMELINE - CODE STYLE ==================== */
+
+.timeline-tech {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-tech::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--term-green), var(--term-cyan));
+}
+
+.timeline-item-tech {
+    position: relative;
+    margin: 2rem 0;
+    padding-left: 2rem;
+}
+
+.timeline-item-tech::before {
+    content: '●';
+    position: absolute;
+    left: -0.55rem;
+    color: var(--term-green);
+    font-size: 1.2rem;
+}
+
+.timeline-date-tech {
+    font-family: 'Fira Code', monospace;
+    color: var(--term-accent);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-title-tech {
+    color: var(--term-text);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.timeline-company-tech {
+    color: var(--term-cyan);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ==================== BUTTONS - TERMINAL STYLE ==================== */
+
+.btn-terminal {
+    background: transparent;
+    border: 2px solid var(--term-green);
+    color: var(--term-green);
+    padding: 0.75rem 1.5rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-terminal:hover {
+    background: var(--term-green);
+    color: var(--term-bg);
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+}
+
+.btn-terminal-secondary {
+    border-color: var(--term-cyan);
+    color: var(--term-cyan);
+}
+
+.btn-terminal-secondary:hover {
+    background: var(--term-cyan);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+    .skill-row {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+        padding: 0.8rem 0;
+    }
+
+    .terminal-body {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+
+    .quick-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==================== GITHUB CONTRIBUTION STYLE ==================== */
+
+.contributions-grid {
+    display: grid;
+    grid-template-columns: repeat(52, 10px);
+    gap: 3px;
+    margin: 2rem 0;
+}
+
+.contribution-day {
+    width: 10px;
+    height: 10px;
+    background: var(--term-surface);
+    border-radius: 2px;
+}
+
+.contribution-day.level-1 {
+    background: rgba(57, 255, 20, 0.3);
+}
+
+.contribution-day.level-2 {
+    background: rgba(57, 255, 20, 0.6);
+}
+
+.contribution-day.level-3 {
+    background: rgba(57, 255, 20, 0.9);
+}
+
+.contribution-day.level-4 {
+    background: var(--term-green);
+}
+
+/* ==================== GLITCH EFFECT ==================== */
+
+.glitch {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+
+.glitch::before {
+    animation: glitch-1 0.3s infinite;
+    color: var(--term-cyan);
+    z-index: -1;
+}
+
+.glitch::after {
+    animation: glitch-2 0.3s infinite;
+    color: var(--term-red);
+    z-index: -2;
+}
+
+@keyframes glitch-1 {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes glitch-2 {
+    0% { transform: translate(0); }
+    20% { transform: translate(2px, -2px); }
+    40% { transform: translate(2px, 2px); }
+    60% { transform: translate(-2px, -2px); }
+    80% { transform: translate(-2px, 2px); }
+    100% { transform: translate(0); }
+}
+
+/* ==================== SCANLINE EFFECT ==================== */
+
+.scanline {
+    position: relative;
+    overflow: hidden;
+}
+
+.scanline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 1000;
+}
