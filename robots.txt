@@ -1,0 +1,11 @@
+# robots.txt for elic01.github.io
+
+User-agent: *
+Disallow: /admin.html
+Disallow: /admin/
+Disallow: /ADMIN_GUIDE.md
+
+# Allow everything else
+Allow: /
+
+Sitemap: https://elic01.github.io/sitemap.xml

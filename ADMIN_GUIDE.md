@@ -2,13 +2,17 @@
 
 ## 🔐 Accessing the Admin Panel
 
-Navigate to: `https://elic01.github.io/admin.html`
+**PRIVATE - For Personal Use Only**
 
-### Default Credentials:
-- **Username**: `admin`
-- **Password**: `portfolio2025`
+### Access:
+- Secret link hidden on main portfolio page
+- Look for process ID (pid) in footer terminal output
+- Keep this location confidential
 
-⚠️ **IMPORTANT**: Change the password immediately after first login!
+### Initial Setup:
+1. Access admin panel via secret link
+2. Use configured credentials
+3. Change password immediately after first login
 
 ---
 

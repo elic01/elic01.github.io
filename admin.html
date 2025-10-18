@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Admin Panel | elic01@portfolio</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>System Access</title>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/terminal.css">
     <link rel="stylesheet" href="./assets/css/admin.css">
@@ -29,24 +32,21 @@
                     <span class="prompt">$</span> sudo login
                 </div>
                 <div class="terminal-output">
-                    <p><span class="comment"># Admin Panel Access</span></p>
-                    <p><span class="comment"># Enter credentials to manage portfolio</span></p>
+                    <p><span class="comment"># Access Restricted</span></p>
+                    <p><span class="comment"># Authorization Required</span></p>
                     <p></p>
                     <form id="login-form">
                         <div class="form-group-terminal">
                             <label for="username"><span class="prompt">></span> Username:</label>
-                            <input type="text" id="username" class="form-control-terminal" required placeholder="admin" autocomplete="username">
+                            <input type="text" id="username" class="form-control-terminal" required autocomplete="username">
                         </div>
                         <div class="form-group-terminal">
                             <label for="password"><span class="prompt">></span> Password:</label>
-                            <input type="password" id="password" class="form-control-terminal" required placeholder="••••••••" autocomplete="current-password">
+                            <input type="password" id="password" class="form-control-terminal" required autocomplete="current-password">
                         </div>
                         <p id="login-error" class="error-message" style="display: none;"></p>
                         <button type="submit" class="btn-terminal">[ Authenticate ]</button>
                     </form>
-                    <p></p>
-                    <p><span class="text-dim">Default: username: admin, password: portfolio2025</span></p>
-                    <p><span class="comment"># Change password after first login</span></p>
                 </div>
             </div>
         </div>
