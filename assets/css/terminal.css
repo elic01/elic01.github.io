@@ -23,6 +23,133 @@
     --hacker-green: #0f0;
 }
 
+/* ==================== BACKGROUND EFFECTS ==================== */
+
+/* Matrix Rain Canvas */
+#matrix-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+/* Cyber Grid Background */
+.cyber-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.03;
+    pointer-events: none;
+    background-image:
+        linear-gradient(var(--term-green) 1px, transparent 1px),
+        linear-gradient(90deg, var(--term-green) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
+
+/* Scanline Overlay */
+.scanline-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.05;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    animation: scanline 8s linear infinite;
+}
+
+@keyframes scanline {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+/* ==================== TERMINAL NAVBAR ==================== */
+
+.terminal-header {
+    background: rgba(13, 17, 23, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--term-border);
+}
+
+.terminal-logo {
+    font-family: 'Fira Code', monospace !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.prompt-symbol {
+    color: var(--term-green);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.logo-text {
+    color: var(--term-text);
+    font-size: 1rem;
+}
+
+.text-dim {
+    color: var(--term-text-dim);
+}
+
+.terminal-nav a {
+    font-family: 'Fira Code', monospace;
+    color: var(--term-text) !important;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.terminal-nav a:hover {
+    color: var(--term-green) !important;
+}
+
+.nav-bracket {
+    color: var(--term-text-dim);
+    transition: color 0.3s;
+}
+
+.terminal-nav a:hover .nav-bracket {
+    color: var(--term-cyan);
+}
+
+.terminal-nav li.active a {
+    color: var(--term-green) !important;
+}
+
+.terminal-nav li.active .nav-bracket {
+    color: var(--term-green);
+}
+
 /* ==================== TERMINAL WINDOW ==================== */
 
 .terminal-window {

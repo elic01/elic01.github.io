@@ -37,26 +37,28 @@
     <link rel="stylesheet" href="./assets/css/terminal.css">
 </head>
 <body>
-    <div class="noise-overlay"></div>
+    <!-- Terminal Background Effects -->
+    <canvas id="matrix-rain"></canvas>
+    <div class="cyber-grid"></div>
+    <div class="scanline-overlay"></div>
 
     <!-- Header -->
-    <header id="header">
+    <header id="header" class="terminal-header">
         <div class="container nav-container">
-            <a href="#" class="logo">
-                <div class="logo-icon">EC</div>
-                <span>Emmanuel Leon Isheanesu Chinjekure</span>
+            <a href="#" class="logo terminal-logo">
+                <span class="prompt-symbol">$</span>
+                <span class="logo-text">elic01<span class="text-dim">@portfolio</span></span>
             </a>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <!--<li><a href="#certifications">Certifications</a></li>-->
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-links terminal-nav">
+                <li><a href="#home"><span class="nav-bracket">[</span>home<span class="nav-bracket">]</span></a></li>
+                <li><a href="#about"><span class="nav-bracket">[</span>about<span class="nav-bracket">]</span></a></li>
+                <li><a href="#skills"><span class="nav-bracket">[</span>skills<span class="nav-bracket">]</span></a></li>
+                <li><a href="#projects"><span class="nav-bracket">[</span>projects<span class="nav-bracket">]</span></a></li>
+                <li><a href="#experience"><span class="nav-bracket">[</span>experience<span class="nav-bracket">]</span></a></li>
+                <li><a href="#contact"><span class="nav-bracket">[</span>contact<span class="nav-bracket">]</span></a></li>
             </ul>
         </div>
     </header>
@@ -558,5 +560,8 @@
 
     <!-- Enhanced features JavaScript -->
     <script src="./assets/js/enhanced.js"></script>
+
+    <!-- Terminal Background Effects -->
+    <script src="./assets/js/matrix.js"></script>
 </body>
 </html>
