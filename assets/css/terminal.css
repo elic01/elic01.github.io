@@ -545,3 +545,86 @@
     pointer-events: none;
     z-index: 1000;
 }
+
+/* ==================== PROJECT CODE BLOCKS ==================== */
+
+.project-code {
+    background: var(--term-bg);
+    border: 1px solid var(--term-border);
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+.project-code pre {
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.project-code code {
+    font-family: 'Fira Code', monospace;
+    color: var(--term-text);
+}
+
+/* Syntax Highlighting */
+.comment {
+    color: #6a737d;
+    font-style: italic;
+}
+
+.keyword {
+    color: #ff7b72;
+    font-weight: 600;
+}
+
+.string {
+    color: #a5d6ff;
+}
+
+.json-key {
+    color: #79c0ff;
+}
+
+.json-string {
+    color: #a5d6ff;
+}
+
+.text-cyan {
+    color: var(--term-cyan);
+    font-weight: 600;
+}
+
+.text-green {
+    color: var(--term-green);
+}
+
+/* File listing styling */
+.file-list {
+    font-family: 'Fira Code', monospace;
+}
+
+.file-permissions {
+    color: var(--term-text-dim);
+    margin-right: 0.5rem;
+}
+
+.file-name {
+    color: var(--term-cyan);
+    font-weight: 500;
+}
+
+.skill-bar-term {
+    color: var(--term-green);
+    font-family: monospace;
+    letter-spacing: -1px;
+    margin-left: 0.5rem;
+}
+
+/* Cursor blink */
+.cursor-blink {
+    color: var(--term-green);
+    animation: blink 1s infinite;
+}

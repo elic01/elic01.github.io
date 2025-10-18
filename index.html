@@ -34,6 +34,7 @@
     <!-- External Stylesheet -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/enhanced.css">
+    <link rel="stylesheet" href="./assets/css/terminal.css">
 </head>
 <body>
     <div class="noise-overlay"></div>
@@ -137,22 +138,61 @@
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <div class="about-content">
-                    <p>Hello! I'm Emmanuel, a <strong>Full Stack Developer and Cybersecurity Enthusiast</strong> with hands-on experience in software development, web technologies, and ethical hacking fundamentals. Currently working as an <strong>IT Intern at CIMAS Health Group</strong>, Zimbabwe's leading medical aid society, where I'm gaining invaluable enterprise-level experience.</p>
-
-                    <p>I'm pursuing a <strong>B.Tech Honours in Information Technology</strong> at Harare Institute of Technology (HIT), with an expected graduation in August 2027. My journey in tech has been marked by a deep curiosity about AI, cybersecurity, and innovative tech solutions that solve real-world problems.</p>
-
-                    <p>My technical expertise spans across <strong>Python, C#, Java, JavaScript</strong>, and modern frameworks like <strong>React, Next.js, and Firebase</strong>. I'm passionate about building scalable applications, optimizing performance, and exploring the intersection of technology and healthcare systems.</p>
-
-                    <p>Beyond coding, I'm actively involved in tech communities and leadership roles. As <strong>President of HIT Eco and Wildlife Club</strong>, I lead environmental conservation initiatives. I'm also a <strong>Microsoft Learn Student Ambassador</strong>, member of <strong>Google Developer Communities (GDG)</strong>, and serve in various capacities including peer counseling and social media management.</p>
-
-                    <p>I thrive on collaborative projects, continuous learning, and leveraging technology to create meaningful impact. Whether it's developing full-stack applications, exploring ethical hacking, or contributing to open-source projects, I'm always eager to expand my skills and take on new challenges.</p>
-
-                    <p><strong>Let's connect!</strong> I'm always open to internship opportunities, collaborations, or just a conversation about tech innovations. Feel free to <a href="#contact">reach out</a>!</p>
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-button red"></span>
+                    <span class="terminal-button yellow"></span>
+                    <span class="terminal-button green"></span>
+                    <span class="terminal-title">elic01@portfolio:~$</span>
                 </div>
-                <div class="about-image">
-                    <img data-src="./assets/images/elic.jpg" alt="Emmanuel Leon Isheanesu Chinjekure" loading="lazy">
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">$</span> cat about.txt
+                    </div>
+                    <div class="terminal-output">
+                        <p><span class="comment">// IT Intern @ CIMAS Health Group</span></p>
+                        <p><span class="comment">// B.Tech IT Student @ HIT (2027)</span></p>
+                        <p><span class="comment">// Location: Harare, Zimbabwe</span></p>
+                        <p></p>
+                        <p>Building web apps, breaking systems, learning security.</p>
+                        <p>Interested in: Full Stack Dev, Cybersecurity, Cloud</p>
+                        <p></p>
+                        <p><span class="text-cyan">Currently:</span> Working with enterprise IT at Zimbabwe's leading medical aid</p>
+                        <p><span class="text-cyan">Focus:</span> Next.js, React, Firebase, Linux, Python</p>
+                        <p><span class="text-cyan">Learning:</span> Ethical hacking, network security, Bash scripting</p>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">$</span> ls -la skills/
+                    </div>
+                    <div class="terminal-output file-list">
+                        <p><span class="file-permissions">-rw-r--r--</span> elic01 <span class="file-name">javascript.js</span>  <span class="skill-bar-term">████████░░</span> 85%</p>
+                        <p><span class="file-permissions">-rw-r--r--</span> elic01 <span class="file-name">python.py</span>      <span class="skill-bar-term">███████░░░</span> 70%</p>
+                        <p><span class="file-permissions">-rw-r--r--</span> elic01 <span class="file-name">nextjs.jsx</span>     <span class="skill-bar-term">███████░░░</span> 70%</p>
+                        <p><span class="file-permissions">-rw-r--r--</span> elic01 <span class="file-name">react.jsx</span>      <span class="skill-bar-term">███████▓░░</span> 75%</p>
+                        <p><span class="file-permissions">-rw-r--r--</span> elic01 <span class="file-name">firebase.js</span>    <span class="skill-bar-term">███████░░░</span> 70%</p>
+                        <p><span class="file-permissions">-rw-r--r--</span> elic01 <span class="file-name">linux.sh</span>       <span class="skill-bar-term">███████░░░</span> 70%</p>
+                        <p><span class="file-permissions">-rw-r--r--</span> elic01 <span class="file-name">mysql.sql</span>      <span class="skill-bar-term">███████▓░░</span> 75%</p>
+                        <p><span class="file-permissions">-rw-r--r--</span> elic01 <span class="file-name">git.sh</span>         <span class="skill-bar-term">████████▓░</span> 85%</p>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">$</span> cat achievements.json
+                    </div>
+                    <div class="terminal-output code-block">
+                        <p>{</p>
+                        <p>  <span class="json-key">"leadership"</span>: [</p>
+                        <p>    <span class="json-string">"President - HIT Eco & Wildlife Club"</span>,</p>
+                        <p>    <span class="json-string">"Social Media Manager - Campus Spotlight"</span></p>
+                        <p>  ],</p>
+                        <p>  <span class="json-key">"community"</span>: [</p>
+                        <p>    <span class="json-string">"Microsoft Learn Student Ambassador"</span>,</p>
+                        <p>    <span class="json-string">"Google Developer Communities Member"</span>,</p>
+                        <p>    <span class="json-string">"ISACA HIT Chapter"</span></p>
+                        <p>  ]</p>
+                        <p>}</p>
+                    </div>
+                    <div class="terminal-line cursor">
+                        <span class="prompt">$</span> <span class="cursor-blink">_</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -537,15 +577,24 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">UniConnect</h3>
-                        <h4 class="project-subtitle">HIT 200 (Group Project)</h4>
-                        <p class="project-description">Developed a full-stack student platform for streamlining feedback process within a university environment. Implemented features including role-based user authentication, database management, and a responsive user interface.</p>
+                        <h4 class="project-subtitle">Student Feedback System</h4>
+                        <div class="project-code">
+                            <pre><code><span class="comment">// Stack</span>
+<span class="keyword">const</span> tech = {
+  frontend: [<span class="string">'Next.js'</span>, <span class="string">'TypeScript'</span>, <span class="string">'Tailwind'</span>],
+  backend: [<span class="string">'Firebase'</span>, <span class="string">'Firestore'</span>],
+  auth: <span class="string">'Role-based (Admin/Student)'</span>
+};
+
+<span class="comment">// Built the frontend from scratch</span>
+<span class="comment">// First time using Next.js App Router</span>
+<span class="comment">// Firebase security rules were challenging</span></code></pre>
+                        </div>
                         <div class="project-tech">
                             <span class="tech-tag">Next.js</span>
                             <span class="tech-tag">TypeScript</span>
                             <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Firestore</span>
                             <span class="tech-tag">Tailwind CSS</span>
-                            <span class="tech-tag">Git</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/elic01/uniconnect" title="View Code"><i class="fab fa-github"></i></a>
@@ -559,8 +608,20 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Portfolio Website</h3>
-                        <h4 class="project-subtitle">Personal Project</h4>
-                        <p class="project-description">Built and deployed a personal portfolio website to showcase projects, skills, and professional background. Optimized for performance with 85% JavaScript reduction and lazy loading. Features working contact form, theme toggle, and responsive design for all devices.</p>
+                        <h4 class="project-subtitle">You're Looking At It</h4>
+                        <div class="project-code">
+                            <pre><code><span class="comment">// Optimizations</span>
+- Reduced JS by 85% (9 files → 1)
+- Lazy loading images
+- EmailJS contact form
+- Terminal theme redesign
+
+<span class="comment">// What I learned</span>
+- Performance optimization
+- Vanilla JS > heavy frameworks
+- CSS custom properties
+- GitHub Pages deployment</code></pre>
+                        </div>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -578,9 +639,17 @@
                         <img data-src="./assets/images/zimosaka.png" alt="Zim Osaka Expo Website" loading="lazy">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Zim Osaka Expo Website</h3>
-                        <h4 class="project-subtitle">Hackathon Challenge</h4>
-                        <p class="project-description">Collaborated in a hackathon to develop a promotional website for the Zimbabwe Osaka Expo 2025. Designed and implemented a fully responsive, mobile-friendly website showcasing event details, objectives, and real-time weather integration.</p>
+                        <h3 class="project-title">Zim Osaka Expo 2025</h3>
+                        <h4 class="project-subtitle">Hackathon Project</h4>
+                        <div class="project-code">
+                            <pre><code><span class="comment">// APIs integrated</span>
+- Gemini AI <span class="comment">(chatbot)</span>
+- Weather API <span class="comment">(real-time data)</span>
+
+<span class="comment">// Built in hackathon timeframe</span>
+<span class="comment">// Fully responsive design</span>
+<span class="comment">// Promotional site for Zimbabwe @ Osaka Expo</span></code></pre>
+                        </div>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -825,4 +894,3 @@
     <script src="./assets/js/enhanced.js"></script>
 </body>
 </html>
-<link rel="stylesheet" href="./assets/css/terminal.css">
