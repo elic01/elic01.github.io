@@ -1,0 +1,35 @@
+# Development & Private Documentation
+ADMIN_GUIDE.md
+CHANGELOG.md
+DEPLOYMENT.md
+FINAL_UPDATE.md
+IMAGE_OPTIMIZATION.md
+OPTIMIZATION_GUIDE.md
+QUICK_START.md
+REDESIGN_ROADMAP.md
+REVAMP_2025.md
+REVAMP_SUMMARY.md
+SETUP_EMAILJS.md
+UPDATE_SUMMARY.md
+
+# Development notes
+*.notes
+*.todo
+dev-notes/
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor directories
+.vscode/
+.idea/
+*.sublime-*
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
