@@ -906,8 +906,130 @@ textarea.form-control-terminal {
     color: var(--term-text-dim);
 }
 
-/* Responsive Footer */
+/* ==================== MOBILE OPTIMIZATION ==================== */
+
 @media (max-width: 768px) {
+    /* Background Effects - Reduce for performance */
+    #matrix-rain {
+        opacity: 0.08;
+    }
+
+    .cyber-grid {
+        opacity: 0.02;
+        background-size: 30px 30px;
+    }
+
+    .scanline-overlay {
+        opacity: 0.03;
+    }
+
+    /* Terminal Windows */
+    .terminal-window {
+        margin: 1rem 0;
+        border-radius: 6px;
+    }
+
+    .terminal-header {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .terminal-button {
+        width: 10px;
+        height: 10px;
+    }
+
+    .terminal-title {
+        font-size: 0.75rem;
+    }
+
+    .terminal-body {
+        padding: 1rem;
+        font-size: 0.8rem;
+        min-height: 200px;
+    }
+
+    .terminal-line {
+        flex-wrap: wrap;
+    }
+
+    .terminal-output {
+        padding-left: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    /* Navbar */
+    .terminal-logo {
+        font-size: 0.9rem;
+    }
+
+    .prompt-symbol {
+        font-size: 1rem;
+    }
+
+    .logo-text {
+        font-size: 0.85rem;
+    }
+
+    /* Hero Section */
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .stat-item {
+        width: 100%;
+    }
+
+    /* Project Cards */
+    .project-card {
+        margin: 1rem 0;
+    }
+
+    .project-image img {
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+    .project-code {
+        padding: 0.75rem;
+        overflow-x: auto;
+    }
+
+    .project-code pre {
+        font-size: 0.75rem;
+    }
+
+    /* Skill Tree */
+    .skill-tree {
+        font-size: 0.75rem;
+        line-height: 1.6;
+        overflow-x: auto;
+    }
+
+    .skill-tree p {
+        white-space: nowrap;
+    }
+
+    /* Contact Form */
+    .form-control-terminal {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    textarea.form-control-terminal {
+        min-height: 100px;
+    }
+
+    .btn-terminal {
+        width: 100%;
+        padding: 0.75rem;
+    }
+
+    /* Footer */
     .footer-links-terminal {
         flex-direction: column;
         gap: 1rem;
@@ -915,5 +1037,74 @@ textarea.form-control-terminal {
 
     .footer-terminal {
         padding: 0 1rem;
+    }
+
+    .footer-output {
+        padding-left: 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    /* Images - Responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hero-image-container {
+        margin-top: 2rem;
+    }
+
+    .hero-image img {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    /* Code Blocks */
+    .code-block {
+        font-size: 0.75rem;
+        overflow-x: auto;
+    }
+
+    /* File Listings */
+    .file-list p {
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+}
+
+/* Extra Small Devices (phones in portrait) */
+@media (max-width: 480px) {
+    .terminal-body {
+        padding: 0.75rem;
+        font-size: 0.75rem;
+    }
+
+    .terminal-output {
+        padding-left: 0.25rem;
+    }
+
+    .hero-description {
+        font-size: 0.85rem;
+    }
+
+    .project-code pre {
+        font-size: 0.7rem;
+    }
+
+    .skill-tree {
+        font-size: 0.7rem;
+    }
+
+    .footer-output {
+        font-size: 0.8rem;
+    }
+
+    /* Further reduce background effects */
+    #matrix-rain {
+        display: none;
+    }
+
+    .cyber-grid {
+        opacity: 0.01;
     }
 }
