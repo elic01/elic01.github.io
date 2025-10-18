@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Admin Panel | elic01@portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/terminal.css">
+    <link rel="stylesheet" href="./assets/css/admin.css">
+</head>
+<body>
+    <!-- Terminal Background Effects -->
+    <canvas id="matrix-rain"></canvas>
+    <div class="cyber-grid"></div>
+    <div class="scanline-overlay"></div>
+
+    <!-- Login Screen -->
+    <div id="login-screen" class="admin-container">
+        <div class="terminal-window admin-terminal">
+            <div class="terminal-header">
+                <span class="terminal-button red"></span>
+                <span class="terminal-button yellow"></span>
+                <span class="terminal-button green"></span>
+                <span class="terminal-title">admin@portfolio:~$</span>
+            </div>
+            <div class="terminal-body">
+                <div class="terminal-line">
+                    <span class="prompt">$</span> sudo login
+                </div>
+                <div class="terminal-output">
+                    <p><span class="comment"># Admin Panel Access</span></p>
+                    <p><span class="comment"># Enter credentials to manage portfolio</span></p>
+                    <p></p>
+                    <form id="login-form">
+                        <div class="form-group-terminal">
+                            <label for="username"><span class="prompt">></span> Username:</label>
+                            <input type="text" id="username" class="form-control-terminal" required placeholder="admin" autocomplete="username">
+                        </div>
+                        <div class="form-group-terminal">
+                            <label for="password"><span class="prompt">></span> Password:</label>
+                            <input type="password" id="password" class="form-control-terminal" required placeholder="••••••••" autocomplete="current-password">
+                        </div>
+                        <p id="login-error" class="error-message" style="display: none;"></p>
+                        <button type="submit" class="btn-terminal">[ Authenticate ]</button>
+                    </form>
+                    <p></p>
+                    <p><span class="text-dim">Default: username: admin, password: portfolio2025</span></p>
+                    <p><span class="comment"># Change password after first login</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="admin-dashboard" style="display: none;">
+        <!-- Header -->
+        <header class="admin-header terminal-header">
+            <div class="container">
+                <div class="admin-nav">
+                    <a href="#" class="logo terminal-logo">
+                        <span class="prompt-symbol">#</span>
+                        <span class="logo-text">admin<span class="text-dim">@portfolio</span></span>
+                    </a>
+                    <div class="admin-actions">
+                        <a href="index.html" class="btn-terminal-small" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> View Site
+                        </a>
+                        <button id="logout-btn" class="btn-terminal-small">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <div class="container">
+                <!-- Tabs -->
+                <div class="admin-tabs">
+                    <button class="tab-btn active" data-tab="projects">
+                        <i class="fas fa-code"></i> Projects
+                    </button>
+                    <button class="tab-btn" data-tab="experience">
+                        <i class="fas fa-briefcase"></i> Experience
+                    </button>
+                    <button class="tab-btn" data-tab="skills">
+                        <i class="fas fa-terminal"></i> Skills
+                    </button>
+                    <button class="tab-btn" data-tab="settings">
+                        <i class="fas fa-cog"></i> Settings
+                    </button>
+                </div>
+
+                <!-- Projects Tab -->
+                <div class="tab-content active" id="tab-projects">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="terminal-button red"></span>
+                            <span class="terminal-button yellow"></span>
+                            <span class="terminal-button green"></span>
+                            <span class="terminal-title">projects/</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> ls -la projects/
+                            </div>
+                            <div id="projects-list" class="admin-list"></div>
+                            <button id="add-project-btn" class="btn-terminal">
+                                <i class="fas fa-plus"></i> Add New Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Tab -->
+                <div class="tab-content" id="tab-experience">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="terminal-button red"></span>
+                            <span class="terminal-button yellow"></span>
+                            <span class="terminal-button green"></span>
+                            <span class="terminal-title">experience/</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> cat work_history.log
+                            </div>
+                            <div id="experience-list" class="admin-list"></div>
+                            <button id="add-experience-btn" class="btn-terminal">
+                                <i class="fas fa-plus"></i> Add Experience
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Tab -->
+                <div class="tab-content" id="tab-skills">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="terminal-button red"></span>
+                            <span class="terminal-button yellow"></span>
+                            <span class="terminal-button green"></span>
+                            <span class="terminal-title">skills/</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> tree ~/dev/
+                            </div>
+                            <div id="skills-editor" class="skills-editor"></div>
+                            <button id="save-skills-btn" class="btn-terminal">
+                                <i class="fas fa-save"></i> Save Skills
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Tab -->
+                <div class="tab-content" id="tab-settings">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="terminal-button red"></span>
+                            <span class="terminal-button yellow"></span>
+                            <span class="terminal-button green"></span>
+                            <span class="terminal-title">settings/</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> cat config.json
+                            </div>
+                            <div class="settings-form">
+                                <h3>Change Password</h3>
+                                <form id="change-password-form">
+                                    <div class="form-group-terminal">
+                                        <label><span class="prompt">></span> New Password:</label>
+                                        <input type="password" id="new-password" class="form-control-terminal" required>
+                                    </div>
+                                    <div class="form-group-terminal">
+                                        <label><span class="prompt">></span> Confirm Password:</label>
+                                        <input type="password" id="confirm-password" class="form-control-terminal" required>
+                                    </div>
+                                    <button type="submit" class="btn-terminal">Update Password</button>
+                                </form>
+                                <hr class="terminal-divider">
+                                <h3>Data Management</h3>
+                                <div class="data-actions">
+                                    <button id="export-data-btn" class="btn-terminal">
+                                        <i class="fas fa-download"></i> Export Data
+                                    </button>
+                                    <button id="import-data-btn" class="btn-terminal">
+                                        <i class="fas fa-upload"></i> Import Data
+                                    </button>
+                                    <input type="file" id="import-file" accept=".json" style="display: none;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Project Edit -->
+    <div id="project-modal" class="modal" style="display: none;">
+        <div class="modal-content terminal-window">
+            <div class="terminal-header">
+                <span class="terminal-button red"></span>
+                <span class="terminal-button yellow"></span>
+                <span class="terminal-button green"></span>
+                <span class="terminal-title">edit project</span>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="terminal-body">
+                <form id="project-form">
+                    <input type="hidden" id="project-id">
+                    <div class="form-group-terminal">
+                        <label>Project Title:</label>
+                        <input type="text" id="project-title" class="form-control-terminal" required>
+                    </div>
+                    <div class="form-group-terminal">
+                        <label>Subtitle:</label>
+                        <input type="text" id="project-subtitle" class="form-control-terminal" required>
+                    </div>
+                    <div class="form-group-terminal">
+                        <label>Technologies (comma-separated):</label>
+                        <input type="text" id="project-tech" class="form-control-terminal" placeholder="Next.js, TypeScript, Firebase">
+                    </div>
+                    <div class="form-group-terminal">
+                        <label>Code Snippet:</label>
+                        <textarea id="project-code" class="form-control-terminal" rows="8"></textarea>
+                    </div>
+                    <div class="form-group-terminal">
+                        <label>GitHub URL:</label>
+                        <input type="url" id="project-github" class="form-control-terminal">
+                    </div>
+                    <div class="form-group-terminal">
+                        <label>Live Demo URL:</label>
+                        <input type="url" id="project-demo" class="form-control-terminal">
+                    </div>
+                    <div class="form-group-terminal">
+                        <label>Image URL:</label>
+                        <input type="text" id="project-image" class="form-control-terminal" placeholder="./assets/images/project.png">
+                    </div>
+                    <div class="modal-actions">
+                        <button type="submit" class="btn-terminal">Save Project</button>
+                        <button type="button" class="btn-terminal-secondary" onclick="closeModal()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Scripts -->
+    <script src="./assets/js/matrix.js"></script>
+    <script src="./assets/js/admin.js"></script>
+</body>
+</html>
