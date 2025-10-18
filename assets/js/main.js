@@ -443,13 +443,13 @@ const Chatbot = {
     },
 
     open() {
-        this.panel.style.display = 'flex';
+        this.panel.classList.add('active');
         this.button.style.display = 'none';
         this.input.focus();
     },
 
     close() {
-        this.panel.style.display = 'none';
+        this.panel.classList.remove('active');
         this.button.style.display = 'flex';
     },
 
@@ -481,37 +481,94 @@ const Chatbot = {
         const msg = message.toLowerCase();
 
         const responses = {
-            greetings: ["Hello! How can I help you learn more about Emmanuel?", "Hi there! Feel free to ask about Emmanuel's projects, skills, or experience at CIMAS!"],
-            projects: ["Emmanuel has worked on several exciting projects including UniConnect, a student feedback platform built with Next.js and Firebase, and the Zimbabwe Osaka Expo website. Check out the Projects section for more details!"],
-            contact: ["You can reach Emmanuel at emmanuelisheanesu2004@gmail.com or +263 78 854 7017. You can also use the contact form on this page."],
-            skills: ["Emmanuel is proficient in HTML, CSS, JavaScript, Python, Java, C#, React, Next.js, Node.js, and more. He's also experienced in databases like MySQL, MongoDB, and Firestore. He's currently applying these skills in healthcare IT at CIMAS Health Group."],
-            experience: ["Emmanuel is currently an IT Intern at CIMAS Health Group (Aug 2025 - Aug 2026), working with enterprise IT systems and healthcare technology. He's also President of HIT Eco and Wildlife Club, a Microsoft Learn Student Ambassador, and active in several tech communities."],
-            cimas: ["Emmanuel is an IT Intern at CIMAS Health Group, Zimbabwe's leading medical aid society. He works with IT support, systems administration, network management, and digital transformation initiatives in healthcare."],
-            internship: ["Emmanuel is currently doing a one-year IT internship at CIMAS Health Group (August 2025 - August 2026), gaining hands-on experience with enterprise IT systems and healthcare technology infrastructure."],
-            education: ["Emmanuel is pursuing Information Technology at Harare Institute of Technology (HIT), focusing on software development and cybersecurity."],
-            thanks: ["You're very welcome! Let me know if you need anything else."]
+            greetings: [
+                "Hi! I'm here to help you learn about Emmanuel. Ask me about his work at CIMAS, projects, or tech stack!",
+                "Hello! Want to know about Emmanuel's experience, skills, or how to get in touch? Just ask!"
+            ],
+            projects: [
+                "Emmanuel's key projects:\n\n1. UniConnect - Student feedback system (Next.js, TypeScript, Firebase)\n2. Portfolio Website - You're on it! (HTML, CSS, JS with terminal theme)\n3. Zim Osaka Expo 2025 - Event website (Gemini API, Weather API)\n\nAll available on his GitHub!"
+            ],
+            uniconnect: [
+                "UniConnect is a full-stack student platform built with Next.js, TypeScript, and Firebase. It features role-based authentication and streamlines university feedback processes. First time using Next.js App Router - the Firebase security rules were challenging but worth it!"
+            ],
+            contact: [
+                "📧 Email: emmanuelisheanesu2004@gmail.com\n📱 Phone: +263 78 854 7017\n🌍 Location: Harare, Zimbabwe\n\nYou can also use the contact form below to send a message directly!"
+            ],
+            skills: [
+                "Emmanuel's tech stack:\n\n💻 Languages: JavaScript, Python, Java, C#, HTML/CSS\n⚛️ Frontend: React, Next.js, Tailwind CSS\n🔧 Backend: Node.js, Firebase, MySQL\n🐧 Systems: Linux, Bash scripting\n🛡️ Learning: Cybersecurity, network security\n\nCurrently applying these skills in enterprise healthcare IT at CIMAS!"
+            ],
+            experience: [
+                "Current Role:\n🏥 IT Intern @ CIMAS Health Group (Aug 2025 - Aug 2026)\n- Enterprise IT systems & healthcare tech\n- Network management & digital transformation\n\nLeadership:\n🌿 President @ HIT Eco & Wildlife Club\n💻 Microsoft Learn Student Ambassador\n👥 Google Developer Communities member\n\nView the Experience section for full details!"
+            ],
+            cimas: [
+                "Emmanuel is an IT Intern at CIMAS Health Group, Zimbabwe's leading medical aid society. He works with:\n\n• Enterprise IT infrastructure\n• Healthcare technology systems\n• Network management\n• Digital transformation projects\n\nGaining hands-on experience with real-world IT solutions in healthcare!"
+            ],
+            education: [
+                "🎓 B.Tech Honours in Information Technology\n🏫 Harare Institute of Technology (HIT)\n📅 Expected graduation: August 2027\n\nFocus areas: Software development, web technologies, and cybersecurity fundamentals."
+            ],
+            github: [
+                "Check out Emmanuel's work on GitHub: github.com/elic01\n\nYou'll find all his projects including UniConnect, this portfolio, and more!"
+            ],
+            linkedin: [
+                "Connect with Emmanuel on LinkedIn: linkedin.com/in/emmanuel-l-i-chinjekure\n\nGreat for professional networking and staying updated with his journey!"
+            ],
+            hire: [
+                "Emmanuel is open to:\n✅ Internship opportunities\n✅ Freelance projects\n✅ Collaborations\n✅ Tech discussions\n\nReach out via email: emmanuelisheanesu2004@gmail.com"
+            ],
+            thanks: ["You're welcome! Feel free to ask anything else about Emmanuel's work, skills, or experience! 😊"]
         };
 
-        if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey')) {
+        // Greetings
+        if (msg.match(/\b(hello|hi|hey|greet|good\s?(morning|afternoon|evening))\b/)) {
             return responses.greetings[Math.floor(Math.random() * responses.greetings.length)];
-        } else if (msg.includes('cimas') || msg.includes('health group')) {
+        }
+        // Specific projects
+        else if (msg.match(/\b(uniconnect|uni\s?connect|student.*platform)\b/)) {
+            return responses.uniconnect[0];
+        }
+        // CIMAS
+        else if (msg.match(/\b(cimas|health\s?group|medical|healthcare)\b/)) {
             return responses.cimas[0];
-        } else if (msg.includes('intern') || msg.includes('internship') || msg.includes('current')) {
-            return responses.internship[0];
-        } else if (msg.includes('project') || msg.includes('work') || msg.includes('portfolio')) {
+        }
+        // Projects
+        else if (msg.match(/\b(project|portfolio|work|built|create|develop)\b/)) {
             return responses.projects[0];
-        } else if (msg.includes('contact') || msg.includes('reach') || msg.includes('email') || msg.includes('phone')) {
+        }
+        // Contact
+        else if (msg.match(/\b(contact|reach|email|phone|message|connect)\b/)) {
             return responses.contact[0];
-        } else if (msg.includes('skill') || msg.includes('technology') || msg.includes('tech') || msg.includes('language')) {
+        }
+        // Skills/Tech
+        else if (msg.match(/\b(skill|technology|tech|stack|language|framework|tool|can\s?you|know)\b/)) {
             return responses.skills[0];
-        } else if (msg.includes('experience') || msg.includes('job') || msg.includes('position') || msg.includes('role')) {
+        }
+        // Experience
+        else if (msg.match(/\b(experience|job|position|role|work|intern|career)\b/)) {
             return responses.experience[0];
-        } else if (msg.includes('education') || msg.includes('study') || msg.includes('university') || msg.includes('college')) {
+        }
+        // Education
+        else if (msg.match(/\b(education|study|university|college|hit|degree|student)\b/)) {
             return responses.education[0];
-        } else if (msg.includes('thank')) {
+        }
+        // GitHub
+        else if (msg.match(/\b(github|git|repo|code|source)\b/)) {
+            return responses.github[0];
+        }
+        // LinkedIn
+        else if (msg.match(/\b(linkedin|linked\s?in|professional|network)\b/)) {
+            return responses.linkedin[0];
+        }
+        // Hiring/Opportunities
+        else if (msg.match(/\b(hire|hiring|available|opportunity|freelance|collaboration)\b/)) {
+            return responses.hire[0];
+        }
+        // Thanks
+        else if (msg.match(/\b(thank|thanks|appreciate)\b/)) {
             return responses.thanks[0];
-        } else {
-            return "I'm here to help! You can ask me about Emmanuel's internship at CIMAS, projects, skills, experience, education, or how to contact him.";
+        }
+        // Default
+        else {
+            return "I can help with:\n\n💼 Experience at CIMAS\n🚀 Projects & portfolio\n💻 Technical skills\n🎓 Education\n📧 Contact information\n\nWhat would you like to know?";
         }
     }
 };
@@ -570,6 +627,33 @@ const SectionAnimations = {
 };
 
 // ============================================
+// SCROLL TO TOP
+// ============================================
+const ScrollToTop = {
+    init() {
+        const scrollBtn = document.getElementById('scroll-top');
+        if (!scrollBtn) return;
+
+        // Show/hide button on scroll
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+
+        // Scroll to top on click
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+};
+
+// ============================================
 // PERFORMANCE MONITORING
 // ============================================
 const Performance = {
@@ -599,6 +683,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Chatbot.init();
     LazyLoad.init();
     SectionAnimations.init();
+    ScrollToTop.init();
     Performance.init();
 });
 

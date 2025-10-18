@@ -878,19 +878,21 @@ textarea.form-control-terminal {
 
 .footer-links-terminal {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     margin: 1rem 0;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .footer-link {
     color: var(--term-green);
     text-decoration: none;
     font-size: 0.9rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s;
+    white-space: nowrap;
 }
 
 .footer-link:hover {
@@ -899,11 +901,263 @@ textarea.form-control-terminal {
 }
 
 .footer-link i {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    min-width: 18px;
+    text-align: center;
 }
 
 .text-dim {
     color: var(--term-text-dim);
+}
+
+/* ==================== SCROLL TO TOP BUTTON ==================== */
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--term-surface);
+    border: 2px solid var(--term-green);
+    border-radius: 8px;
+    color: var(--term-green);
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-top-btn:hover {
+    background: var(--term-green);
+    color: var(--term-bg);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(57, 255, 20, 0.4);
+}
+
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ==================== CHATBOT OPTIMIZATION ==================== */
+
+.chatbot-container {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    z-index: 998;
+}
+
+.chatbot-button {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, var(--term-green), var(--term-cyan));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(57, 255, 20, 0.3);
+    transition: all 0.3s ease;
+    animation: pulse-glow 2s infinite;
+}
+
+.chatbot-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(57, 255, 20, 0.5);
+}
+
+.chatbot-button i {
+    font-size: 1.5rem;
+    color: var(--term-bg);
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(57, 255, 20, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(57, 255, 20, 0.6);
+    }
+}
+
+.chatbot-panel {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 350px;
+    max-width: 90vw;
+    background: var(--term-surface);
+    border: 1px solid var(--term-border);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.chatbot-panel.active {
+    display: block;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chatbot-header {
+    background: var(--term-bg);
+    padding: 1rem;
+    border-bottom: 1px solid var(--term-border);
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.chatbot-avatar {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, var(--term-green), var(--term-cyan));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatbot-avatar i {
+    color: var(--term-bg);
+    font-size: 1rem;
+}
+
+.chatbot-title {
+    flex: 1;
+    color: var(--term-text);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+}
+
+.chatbot-close {
+    background: transparent;
+    border: none;
+    color: var(--term-text-dim);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+.chatbot-close:hover {
+    color: var(--term-red);
+}
+
+.chatbot-messages {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+    background: var(--term-bg);
+}
+
+.chatbot-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chatbot-messages::-webkit-scrollbar-track {
+    background: var(--term-surface);
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb {
+    background: var(--term-border);
+    border-radius: 3px;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb:hover {
+    background: var(--term-green);
+}
+
+.message {
+    margin: 0.75rem 0;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    max-width: 85%;
+}
+
+.bot-message {
+    background: rgba(57, 255, 20, 0.1);
+    border: 1px solid rgba(57, 255, 20, 0.3);
+    color: var(--term-text);
+    margin-right: auto;
+}
+
+.user-message {
+    background: rgba(88, 166, 255, 0.1);
+    border: 1px solid rgba(88, 166, 255, 0.3);
+    color: var(--term-text);
+    margin-left: auto;
+}
+
+.chatbot-input {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--term-surface);
+    border-top: 1px solid var(--term-border);
+    border-radius: 0 0 12px 12px;
+}
+
+.chatbot-input input {
+    flex: 1;
+    background: var(--term-bg);
+    border: 1px solid var(--term-border);
+    border-radius: 6px;
+    padding: 0.75rem;
+    color: var(--term-text);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+}
+
+.chatbot-input input:focus {
+    outline: none;
+    border-color: var(--term-green);
+}
+
+.chatbot-input button {
+    background: var(--term-green);
+    border: none;
+    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+    color: var(--term-bg);
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatbot-input button:hover {
+    background: var(--term-cyan);
+    transform: scale(1.05);
 }
 
 /* ==================== MOBILE OPTIMIZATION ==================== */
@@ -1069,6 +1323,34 @@ textarea.form-control-terminal {
     .file-list p {
         font-size: 0.75rem;
         white-space: nowrap;
+    }
+
+    /* Scroll to Top */
+    .scroll-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    /* Chatbot */
+    .chatbot-container {
+        bottom: 80px;
+        right: 20px;
+    }
+
+    .chatbot-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .chatbot-button i {
+        font-size: 1.3rem;
+    }
+
+    .chatbot-panel {
+        width: 320px;
     }
 }
 
