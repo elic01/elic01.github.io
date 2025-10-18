@@ -90,7 +90,7 @@
                     <span class="typing-text"></span>
                 </h2>
                 <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
-                    I'm a <strong>Full Stack Developer</strong> and <strong>Cybersecurity Enthusiast</strong> currently working as an <strong class="highlight-accent">IT Intern at CIMAS Health Group</strong>. Passionate about building innovative solutions, developing modern web applications, and exploring the intersection of technology and healthcare systems.
+                    <strong>Full Stack Developer</strong> & <strong>Cybersecurity Enthusiast</strong>. Currently <strong class="highlight-accent">IT Intern @ CIMAS Health Group</strong>. Building web apps, learning security, breaking things to understand how they work.
                 </p>
                 <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
                     <div class="stat-item">
@@ -448,50 +448,55 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>I'm always open to new opportunities, collaborations, or just a friendly chat about technology and innovation. Feel free to reach out through any of the channels below.</p>
-                    <ul class="contact-links">
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:emmanuelisheanesu2004@gmail.com">emmanuelisheanesu2004@gmail.com</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+263788547017">+263 78 854 7017</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Harare, Zimbabwe</span>
-                        </li>
-                    </ul>
-                    <div class="contact-social">
-                        <a href="https://github.com/elic01"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/emmanuel-l-i-chinjekure-843b50293"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+            <h2 class="section-title">Contact</h2>
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-button red"></span>
+                    <span class="terminal-button yellow"></span>
+                    <span class="terminal-button green"></span>
+                    <span class="terminal-title">elic01@portfolio:~$</span>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">$</span> cat contact.txt
+                    </div>
+                    <div class="terminal-output">
+                        <p><span class="text-cyan">Email:</span> <a href="mailto:emmanuelisheanesu2004@gmail.com" class="contact-link">emmanuelisheanesu2004@gmail.com</a></p>
+                        <p><span class="text-cyan">Phone:</span> <a href="tel:+263788547017" class="contact-link">+263 78 854 7017</a></p>
+                        <p><span class="text-cyan">Location:</span> Harare, Zimbabwe</p>
+                        <p></p>
+                        <p><span class="text-cyan">GitHub:</span> <a href="https://github.com/elic01" class="contact-link" target="_blank">github.com/elic01</a></p>
+                        <p><span class="text-cyan">LinkedIn:</span> <a href="https://linkedin.com/in/emmanuel-l-i-chinjekure-843b50293" class="contact-link" target="_blank">linkedin.com/in/emmanuel-l-i-chinjekure</a></p>
+                        <p></p>
+                        <p><span class="comment"># Open to internships, collaborations, tech discussions</span></p>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">$</span> ./send_message.sh
+                    </div>
+                    <div class="terminal-output">
+                        <form id="contactForm" class="terminal-form">
+                            <div class="form-group-terminal">
+                                <label for="name"><span class="prompt">></span> Name:</label>
+                                <input type="text" id="name" class="form-control-terminal" required placeholder="Your name">
+                            </div>
+                            <div class="form-group-terminal">
+                                <label for="email"><span class="prompt">></span> Email:</label>
+                                <input type="email" id="email" class="form-control-terminal" required placeholder="your.email@example.com">
+                            </div>
+                            <div class="form-group-terminal">
+                                <label for="subject"><span class="prompt">></span> Subject:</label>
+                                <input type="text" id="subject" class="form-control-terminal" required placeholder="What's this about?">
+                            </div>
+                            <div class="form-group-terminal">
+                                <label for="message"><span class="prompt">></span> Message:</label>
+                                <textarea id="message" class="form-control-terminal" required placeholder="Your message here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-terminal">[ Send Message ]</button>
+                        </form>
+                    </div>
+                    <div class="terminal-line cursor">
+                        <span class="prompt">$</span> <span class="cursor-blink">_</span>
+                    </div>
                 </div>
             </div>
         </div>

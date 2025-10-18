@@ -654,3 +654,64 @@
     color: #6a737d;
     font-style: normal;
 }
+
+/* ==================== TERMINAL CONTACT FORM ==================== */
+
+.contact-link {
+    color: var(--term-green);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-link:hover {
+    color: var(--term-cyan);
+    text-decoration: underline;
+}
+
+.terminal-form {
+    margin-top: 1rem;
+}
+
+.form-group-terminal {
+    margin: 1rem 0;
+}
+
+.form-group-terminal label {
+    display: block;
+    color: var(--term-text);
+    margin-bottom: 0.5rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+}
+
+.form-control-terminal {
+    width: 100%;
+    background: rgba(22, 27, 34, 0.8);
+    border: 1px solid var(--term-border);
+    border-radius: 4px;
+    padding: 0.75rem;
+    color: var(--term-text);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    transition: border-color 0.3s;
+}
+
+.form-control-terminal:focus {
+    outline: none;
+    border-color: var(--term-green);
+    box-shadow: 0 0 0 2px rgba(57, 255, 20, 0.1);
+}
+
+.form-control-terminal::placeholder {
+    color: var(--term-text-dim);
+    font-style: italic;
+}
+
+textarea.form-control-terminal {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn-terminal {
+    margin-top: 1rem;
+}
