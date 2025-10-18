@@ -628,3 +628,29 @@
     color: var(--term-green);
     animation: blink 1s infinite;
 }
+
+/* ==================== SKILL TREE STYLING ==================== */
+
+.skill-tree {
+    font-family: 'Fira Code', monospace;
+    line-height: 1.8;
+}
+
+.skill-tree p {
+    margin: 0.2rem 0;
+    white-space: pre;
+}
+
+.tree-dir {
+    color: var(--term-accent);
+    font-weight: 600;
+}
+
+.skill-tree .file-name {
+    color: var(--term-cyan);
+}
+
+.skill-tree .comment {
+    color: #6a737d;
+    font-style: normal;
+}
